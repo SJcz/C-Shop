@@ -1,0 +1,38 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <view wx:if="{{currentCartProductList.length > 0}}">
+    <view class="cart-product-list">
+      <view class="cart-product-item" wx:for="{{currentCartProductList}}" wx:for-item="product">
+        <icon wx:if="{{product.checked}}" type="success" color="red" class="product-checkbox"
+         bindtap="chooseCartProduct" data-id="{{product.id}}"></icon>
+        <icon wx:else type="circle" color="#ccc" class="product-checkbox" 
+        bindtap="chooseCartProduct" data-id="{{product.id}}"></icon>
+        <image src="{{product.image}}" mode="aspectFill" class="product-image"></image>
+        <view class="product-count-view">
+          <view class="product-info">
+            <view class="product-name">{{product.name}} {{product.amount}}</view>
+            <view class="product-price">￥{{product.price}}</view>
+          </view>
+          <view class="product-count-operation">
+            <text class="down-count" bindtap="reduceSpecificProductNumber" data-id="{{product.id}}">-</text>
+            <text class="show-count">{{product.number}}</text>
+            <text class="up-count" bindtap="addSpecificProductNumber" data-id="{{product.id}}">+</text>
+            <image class="delete-icon" src="/images/delete.png" mode="aspectFill" 
+            bindtap="deleteCartProduct" data-id="{{product.id}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cart-footer">
+      <icon type="success" color="#fff" bindtap="checkCartAllProduct" wx:if="{{allProductAreChecked}}"></icon>
+      <icon type="circle" color="#fff" bindtap="checkCartAllProduct" wx:else></icon>
+      <text class="total-number" bindtap="checkCartAllProduct">全选 ({{currentChoosedPorductNumber}}) </text>
+      <text style="border-right: 2rpx solid #fff" bindtap="navigateToOrderPage">下单 </text>
+      <text class="total-price">合计: ￥{{currentPriceTotal}} </text>
+      <image src="/images/right.png" mode="aspectFill" bindtap="navigateToOrderPage"></image>
+    </view>
+  </view>
+  <view wx:else class="empty-cart">
+    您还没有添加任何商品
+  </view>
+</view>

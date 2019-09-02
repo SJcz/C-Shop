@@ -1,0 +1,12 @@
+<!--pages/my/address/address.wxml-->
+<view>
+  <input bindinput="changeName" placeholder="姓名" class="info-input" value="{{userName}}"/>
+  <input bindinput="changePhone" placeholder="电话" class="info-input" value="{{phone}}"/>
+  <picker mode="region" bindchange="changeRegion"  >
+    <view class="picker">
+      省/市/区县城: <text>{{province}} {{city}} {{township}}</text>
+    </view>
+  </picker>
+  <input bindinput="changeDetailAddress" placeholder="详细地址, 如街道, 楼牌号等" class="info-input" value="{{detailAddress}}"/>
+  <button type="default"  bindtap="saveAddress" hover-class="button-hover" class="confirm-button"> 保存 </button>
+</view>

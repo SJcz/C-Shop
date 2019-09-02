@@ -1,0 +1,191 @@
+/* pages/detail/detail.wxss */
+
+page {
+  height: 100%;
+}
+
+/* 商品详细信息的样式 包含预览图, 操作功能等样式 */
+
+.product-detail-info {
+  padding: 20rpx;
+  text-align: center;
+  position: relative;
+  font-size: small;
+}
+
+.product-detail-info .product-image {
+  width: 400rpx;
+}
+
+/* 商品详细信息的按钮样式 */
+
+.product-detail-info .product-operation-view {
+  background-color: #ab956d;
+  border-radius: 60rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  margin: 30rpx 0;
+  position: relative;
+}
+
+.product-operation-view .product-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product-operation-view .product-operation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product-number image {
+  width: 50rpx;
+  margin-bottom: -15rpx; /*只要多修改, 文字和图标总能对齐的*/
+}
+
+.product-operation image {
+  width: 50rpx;
+}
+
+.product-operation text {
+  line-height: 50rpx; /*只要多修改, 文字和图标总能对齐的*/
+}
+
+.product-operation-view text {
+  margin: 0 20rpx;
+}
+
+.product-detail-info .product-stock, .product-detail-info .product-price {
+  text-align: center;
+  color: #000;
+  padding: 10rpx 0;
+}
+
+.background-view {
+  height: 20rpx;
+  background-color: #eee;
+}
+
+/* 商品详情, 参数, 售后tab的样式 */
+
+.product-introduce {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.product-introduce view {
+  color: #ddd;
+  border-bottom: 1rpx solid #ddd;
+  width: 33.3%;
+  padding: 20rpx 0;
+  text-align: center;
+}
+
+.product-introduce .selected {
+  border-bottom: 2rpx solid #ab956d;
+  color: #ab956d;
+}
+
+.product-introduce-content {
+  text-align: center;
+  background-color: #fff;
+}
+
+/*加入购物车的动画样式*/
+
+.animation-image {
+  width: 40rpx;
+  position: absolute;
+  right: 80rpx;
+  top: 450rpx;
+  border-radius: 20rpx;
+}
+
+.float-cart {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 80rpx;
+}
+
+.float-cart-icon-num {
+  position: absolute;
+  top: 20rpx;
+  right: 70rpx;
+  width: 40rpx;
+  height: 40rpx;
+  color: #fff;
+  background-color: #ab956d;
+  border-radius: 20rpx;
+  line-height: 40rpx;
+}
+
+.animation-image.playing {
+  animation:addToCart 1.5s;
+}
+
+.float-cart.playing {
+  animation-name: scaleCart;
+  animation-duration: 0.2s;
+  animation-delay: 1s;
+}
+.float-cart-icon-num.playing {
+  animation-name: scaleCart;
+  animation-duration: 0.2s;
+  animation-delay: 1s;
+}
+
+
+@keyframes addToCart {
+  0% {
+    transform: translateX(0) rotate(0) scale(0.5);
+  }
+  50% {
+    transform: translateX(45rpx) translateY(-470rpx) rotate(720deg) scale(0.2);
+  }
+  100% {
+    transform: translateX(45rpx) translateY(-450rpx) rotate(720deg) scale(0.01);
+  }
+}
+
+@-webkit-keyframes addToCart {
+  0% {
+    transform: translateX(0) rotate(0) scale(0.5);
+  }
+  50% {
+    transform: translateX(45rpx) translateY(-470rpx) rotate(720deg) scale(0.2);
+  }
+  100% {
+    transform: translateX(45rpx) translateY(-450rpx) rotate(720deg) scale(0.01);
+  }
+}
+
+@keyframes scaleCart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scaleCart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

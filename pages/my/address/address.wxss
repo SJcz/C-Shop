@@ -1,0 +1,30 @@
+/* pages/my/address/address.wxss */
+page {
+   font-size: 30rpx;
+}
+
+.info-input {
+  padding: 20rpx;
+  border-bottom: 2rpx solid #ededed;
+  color: #999;
+  margin: 10rpx;
+}
+
+.picker {
+  padding: 20rpx;
+  color: #000;
+  margin: 10rpx;
+  border-bottom: 2rpx solid #ededed;
+}
+
+.picker text{
+   color: #999;
+}
+
+.confirm-button {
+  margin: 20rpx;
+}
+
+.button-hover {
+  background-color: #555;
+}

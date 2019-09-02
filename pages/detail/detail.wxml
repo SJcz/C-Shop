@@ -1,0 +1,34 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <view class="product-detail-info">
+    <image mode="widthFix" class="product-image" src="{{product.image}}"></image>
+    <view class="product-operation-view">
+      <picker bindchange="changeProductNumber" mode="selector" range="{{pickerRange}}" class="product-number">
+        <text>数量</text>
+        <text>{{selectedProductNumber}}</text>
+        <image mode="widthFix" src="/images/down.png"></image>
+      </picker>
+      <view class="product-operation" bindtap="addToCart">
+        <text>加入购物车</text>
+        <image mode="widthFix" src="/images/cart1.png"></image>
+      </view>
+      
+    </view>
+    <view class="product-stock">有货</view>
+    <view class="product-price">￥{{product.price}}</view>
+    <image class="float-cart {{isPlayingAnimation ? 'playing' : ''}}" 
+    mode="widthFix" src="/images/cart2.png" bindtap="switchToCartPage"></image>
+    <text class="float-cart-icon-num {{isPlayingAnimation ? 'playing' : ''}}" wx:if="{{currentCartProductTotal > 0}}">{{currentCartProductTotal}}</text>
+    <image mode="widthFix" hidden="{{hideAnimationImage}}" src="{{product.image}}" 
+    class="animation-image {{isPlayingAnimation ? 'playing' : ''}}"></image>
+  </view>
+  <view class="background-view"></view>
+  <view class="product-introduce">
+    <view wx:for="{{productIntroduceTabList}}" class="{{selectedIntroduceTabIndex == index ? 'selected' : ''}}" bindtap="clickChangeTab" data-index="{{index}}">{{item}}</view>
+  </view>
+  <swiper bindchange="swiperChangeTab" current="{{selectedIntroduceTabIndex}}" class="product-introduce-content">
+    <swiper-item>这可是个好东西哦</swiper-item>
+    <swiper-item>分量足够</swiper-item>
+    <swiper-item>七天无理由免费退货</swiper-item>
+  </swiper>
+</view>

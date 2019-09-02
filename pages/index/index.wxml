@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view >
+  <swiper indicator-dots="true" autoplay="true" circular="true" class="image-swiper">
+    <swiper-item>
+      <image mode='aspectFill' src='/images/b1.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode='aspectFill' src='/images/b2.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode='aspectFill' src='/images/b3.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <view class="topic-view">
+    <view class="topic-name-view">{{FeaturedTheme}}</view>
+    <view class="topic-content-top-view">
+      <image mode='widthFix' src='/images/s1.png'></image>
+      <image mode='widthFix' src='/images/s2.png'></image>
+    </view>
+    <view class="topic-content-bottom-view">
+      <image mode='widthFix' src='/images/s3.png'></image>
+    </view>
+  </view>
+  <view class="product-view">
+    <view class="product-name-view">{{LatestProduct}}</view>
+    <view class="product-content-view">
+      <view wx:for="{{productList}}" class="product-thumbnail" data-item="{{item}}" 
+      bindtap="navigateToProductDetailPage">
+        <image mode='aspectFill' src="{{item.image}}"  ></image>
+        <view class="product-name">{{item.name}} {{item.amount}}</view>
+        <view class="price">￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

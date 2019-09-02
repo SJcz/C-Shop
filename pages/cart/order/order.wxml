@@ -1,0 +1,30 @@
+<!--pages/cart/order/order.wxml-->
+<view>
+  <view class="user-info" wx:if="{{fullAddress}}" bindtap="navigateToAddressPage">
+    <view class="user-name-phone">
+      <image src="/images/user.png" mode="aspectFit" class="info-icon"></image><view>{{userName}}</view>
+      <image src="/images/phone.png" mode="aspectFit" class="info-icon"></image><view>{{phone}}</view>
+    </view>
+    <view class="address">{{fullAddress}}</view>
+    <image src="/images/right2.png" mode="aspectFit" class="float-icon"></image>
+  </view>
+  <view wx:else class="user-info" bindtap="navigateToAddressPage">
+    <view class="address">地址管理</view>
+    <image src="/images/right2.png" mode="aspectFit" class="float-icon"></image>
+  </view>
+  <view class="gray-background"></view>
+  <view class="product-list">
+    <view wx:for="{{checkedProductList}}" wx:for-item="product" class="product-item">
+      <image src="{{product.image}}" mode="aspectFill" class="product-image"></image>
+      <view class="product-name-price">
+        <view class="product-name">{{product.name}} {{product.amount}}</view>
+        <view class="product-price">￥{{product.price}}</view>
+      </view>
+      <view class="product-number">*{{product.number}}</view>
+    </view>
+  </view>
+  <view class="pay-info">
+    <view class="total-price">付款合计: ￥{{totalPrice}}</view>
+    <view class="pay-btn" bindtap="showPayInfo">去付款</view>
+  </view>
+</view>

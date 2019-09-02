@@ -1,0 +1,37 @@
+<!--pages/my/my.wxml-->
+<view>
+  <view class="user-info">
+    <image class="user-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" wx:if="{{userHasLogin}}"></image>
+    <image class="user-avatar" src="/images/default-avatar.png" mode="aspectFill" wx:else></image>
+    <view class="user-name" wx:if="{{userHasLogin}}" bindtap="showLoginModal">{{userInfo.nickName}}</view>
+    <view class="user-name" wx:else bindtap="showLoginModal">登陆/注册</view>
+  </view>
+  <view class="addree-info">
+    <view class="address-manage" bindtap="navigateToAddressPage">
+      <text>地址管理</text>
+      <image src="/images/right2.png" mode="aspectFill"></image>
+    </view>
+    <view class="address-item" wx:if="{{address.userName}}">{{address.userName}}</view>
+    <view class="address-item" wx:if="{{address.phone}}">{{address.phone}}</view>
+    <view class="address-item" wx:if="{{address.province}}">{{address.province}}{{address.city}}{{address.township}}{{address.detailAddress}}</view>
+  </view>
+  <view class="gray-background"></view>
+  <view class="order-info">
+    <view class="order-info-title">我的订单</view>
+    <view wx:for="{{orderList}}" class="order-item" wx:for-item="order">
+      <view class="order-code">订单编号: {{order.id}}</view>
+      <view class="order-basic-info" bindtap="navigateToOrderDetailPage" data-order="{{order}}">
+        <image src="{{order.displayImage}}" class="cover-image"></image>
+        <view>
+          <view>{{order.displayProductName}}</view>
+          <view>{{order.displayProductNumber}}</view>
+        </view>
+        <text class="pay-status-info">待付款</text>
+      </view>
+      <view class="bottom-info">
+        <text>实付: ￥{{order.infactPay}}</text>
+        <view class="pay-btn" bindtap="showPayInfo">付款</view>
+      </view>
+    </view>
+  </view>
+</view>

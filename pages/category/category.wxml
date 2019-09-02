@@ -1,0 +1,22 @@
+<!--pages/category/category.wxml-->
+<view class="main">
+  <view class="category-left-view">
+    <view wx:for="{{categoryList}}" wx:for-item="category" bind:tap="clickChangeCategory" data-index="{{index}}"
+    class="category-item {{selectedCategoryIndex == index ? 'selected' : ''}}">{{category.name}}</view>
+  </view>
+  <swiper class="category-right-view" vertical="{{true}}" current="{{selectedCategoryIndex}}" 
+  bindchange="swiperChangeCategory">
+    <swiper-item wx:for="{{categoryList}}"  class="category-detail-view">
+      <image mode="widthFix" src="{{categoryDetailImage}}" class="category-index-image"></image>
+      <view class="split-line"></view>
+      <view class="product-view">
+        <view wx:for="{{categoryDetailProductList}}" wx:for-item="product" class="product-thumbnail" 
+        data-item="{{product}}" 
+      bindtap="navigateToProductDetailPage">
+          <image mode='aspectFill' src="{{product.image}}"></image>
+          <view class="product-name">{{product.name}} {{product.amount}}</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

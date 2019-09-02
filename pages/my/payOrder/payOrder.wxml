@@ -1,0 +1,30 @@
+<!--pages/my/payOrder/payOrder.wxml-->
+<view>
+  <view class="order-info">
+    <view><text>下单时间: </text>{{order.createAt}}</view>
+    <view><text>订单编号: </text>{{order.id}}</view>
+    <view class="pay-status-info">待付款</view>
+  </view>
+  <view class="user-info"  bindtap="navigateToAddressPage">
+    <view class="user-name-phone">
+      <image src="/images/user.png" mode="aspectFit" class="info-icon"></image><view>{{order.userName}}</view>
+      <image src="/images/phone.png" mode="aspectFit" class="info-icon"></image><view>{{order.phone}}</view>
+    </view>
+    <view class="address">{{order.fullAddress}}</view>
+  </view>
+  <view class="gray-background"></view>
+  <view class="product-list">
+    <view wx:for="{{order.productList}}" wx:for-item="product" class="product-item">
+      <image src="{{product.image}}" mode="aspectFill" class="product-image"></image>
+      <view class="product-name-price">
+        <view class="product-name">{{product.name}} {{product.amount}}</view>
+        <view class="product-price">￥{{product.price}}</view>
+      </view>
+      <view class="product-number">*{{product.number}}</view>
+    </view>
+  </view>
+  <view class="pay-info">
+    <view class="total-price">付款合计: ￥{{order.infactPay}}</view>
+    <view class="pay-btn" bindtap="showPayInfo">去付款</view>
+  </view>
+</view>

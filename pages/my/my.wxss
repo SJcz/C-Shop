@@ -1,0 +1,109 @@
+/* pages/my/my.wxss */
+page {
+  font-size: 30rpx;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  background-color: #AB956D;
+  color: #fff;
+  padding: 20rpx;
+}
+
+.user-info .user-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #ddd;
+}
+
+.user-info .user-name {
+  line-height: 100rpx;
+  padding: 0 20rpx;
+}
+
+.addree-info .address-manage{
+  position: relative;
+  border-bottom: 2rpx solid #ededed;
+  text-align: center;
+  color: #999;
+  padding: 20rpx;
+}
+
+.addree-info .address-item{
+  border-bottom: 2rpx solid #ededed;
+  color: #999;
+  padding: 20rpx;
+}
+
+.address-manage image{
+  width: 50rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 20rpx;
+  height: 50rpx;
+}
+
+.gray-background {
+  background-color: #eee;
+  height: 20rpx;
+}
+
+.order-info .order-info-title{
+  border-bottom: 2rpx solid #ededed;
+  text-align: center;
+  color: #999;
+  padding: 20rpx;
+}
+
+.order-item {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 35rpx;
+}
+
+.order-item .order-code{
+  color: #888;
+  border-bottom: 2rpx solid #eee;
+  padding: 20rpx 0;
+}
+
+.order-item .order-basic-info {
+  position: relative;
+  display: flex;
+  padding: 20rpx 0;
+  flex-direction: row;
+  border-bottom: 2rpx solid #eee;
+  color: #555;
+}
+
+.order-item .order-basic-info .cover-image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.order-item .pay-status-info {
+  color: rgb(230, 25, 25);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -25rpx;
+  font-size: small;
+}
+
+.order-item .bottom-info {
+  position: relative;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+
+.order-item .bottom-info .pay-btn{
+  color: #fff;
+  background-color:rgb(230, 25, 25);
+  padding: 0rpx 35rpx;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  border-radius: 5rpx;
+}

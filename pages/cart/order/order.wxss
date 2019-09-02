@@ -1,0 +1,97 @@
+/* pages/cart/order/order.wxss */
+page {
+    font-size: 30rpx;
+}
+
+.user-info {
+  padding: 20rpx;
+  position: relative;
+}
+
+.user-info .float-icon{
+  position: absolute;
+  right: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  top: 50%;
+  margin-top: -25rpx;
+}
+
+.user-name-phone, .address {
+  width: 80%;  
+}
+
+.user-name-phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+
+
+.user-name-phone view{
+  max-width: 300rpx;
+}
+
+.user-name-phone image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.address {
+   color: #999;
+}
+
+.gray-background {
+  background-color: #eee;
+  height: 20rpx;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  position: relative;
+  color: #999;
+}
+
+.product-item  .product-number{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+.product-item .product-name-price{
+  padding: 10rpx;
+}
+
+.product-item .product-image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.pay-info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2rpx solid #ccc;
+  display: flex;
+}
+
+.pay-info .total-price{
+  color: #AB956D;
+  padding: 20rpx;
+}
+
+.pay-info .pay-btn{
+  background-color: #AB956D;
+  padding: 20rpx 40rpx;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  right: 0;
+}
+

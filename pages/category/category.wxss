@@ -1,0 +1,87 @@
+/* pages/category/category.wxss */
+
+page, .main {
+  height: 100%;
+  font-size: small;
+}
+
+.category-left-view{
+  width: 150rpx;
+  border-right: 2rpx solid #ddd;
+  text-align: center;
+  color: #000;
+  height: 100%;
+  float: left;
+}
+
+.category-left-view .category-item {
+  border-left: 4rpx solid #fff;
+  padding: 20rpx 0;
+}
+
+.category-left-view .category-item.selected {
+  border-left: 4rpx solid #AB956D;
+  color: #AB956D;
+}
+
+/* 右边分类区的首页图*/
+.category-right-view{
+  width: 558rpx;
+  padding: 0 20rpx;
+  float: right;
+  height: 100%;
+}
+
+.category-detail-view{
+  height: 100%;
+}
+
+.category-index-image{
+  width: 100%;
+}
+
+/* 右边分类区的分割线*/
+.split-line {
+  position: relative;
+  margin: 30rpx 0;
+  height: 10rpx;
+}
+.split-line::after {
+  content: '';
+  position: absolute;
+  left: 150rpx;
+  width: 100rpx;
+  border-bottom: 2rpx solid rgb(148, 148, 148);
+}
+
+.split-line::before {
+  content: '';
+  position: absolute;
+  right: 150rpx;
+  width: 100rpx;
+  border-bottom: 2rpx solid rgb(148, 148, 148);
+}
+
+/* 右边分类区的商品缩略图列表 */
+.product-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.product-view .product-thumbnail {
+  width: 186rpx; /*558rpx/3 = 186rpx*/
+  text-align: center;
+}
+
+.product-view .product-thumbnail image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 0;
+}
+
+.product-view .product-thumbnail .product-name{
+  color: #000;
+  font-size:small;
+}
