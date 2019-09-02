@@ -8,18 +8,18 @@
 
 
 #### 页面展示
-<image src="/scrrenshot/1.png" width="100"/>
-<image src="/scrrenshot/2.png" width="100"/>
-<image src="/scrrenshot/3.png" width="100"/>
-<image src="/scrrenshot/4.png" width="100"/>
-<image src="/scrrenshot/5.png" width="100"/>
-<image src="/scrrenshot/6.png" width="100"/>
-<image src="/scrrenshot/7.png" width="100"/>
-<image src="/scrrenshot/8.jpg" width="100"/>
+<image src="/screenshot/1.png" width="100"/>
+<image src="/screenshot/2.png" width="100"/>
+<image src="/screenshot/3.png" width="100"/>
+<image src="/screenshot/4.png" width="100"/>
+<image src="/screenshot/5.png" width="100"/>
+<image src="/screenshot/6.png" width="100"/>
+<image src="/screenshot/7.png" width="100"/>
+<image src="/screenshot/8.jpg" width="100"/>
 
 
 #### gif效果
-<image src="/scrrenshot/GIF.gif" width="200"/>
+<image src="/screenshot/GIF.gif" width="200"/>
 
 
 
