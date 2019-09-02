@@ -15,25 +15,16 @@
 - [x] 订单
 - [x] 地址管理
 
-## 实现效果
-![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/1.jpg) 
-![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/2.jpg) 
-![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/3.jpg) 
-![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/4.jpg) 
-![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/5.jpg) 
-![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/6.jpg) 
 
 #### 页面展示
 ![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/1.png) 
 ![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/2.png) 
-<image src="/screenshot/1.png" width="300"/>
-<image src="/screenshot/2.png" width="300"/>
-<image src="/screenshot/3.png" width="300"/>
-<image src="/screenshot/4.png" width="300"/>
-<image src="/screenshot/5.png" width="300"/>
-<image src="/screenshot/6.png" width="300"/>
-<image src="/screenshot/7.png" width="300"/>
-<image src="/screenshot/8.jpg" width="300"/>
+![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/3.png) 
+![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/4.png) 
+![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/5.png) 
+![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/6.png) 
+![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/7.png) 
+![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/8.jpg) 
 
 
 #### gif效果
