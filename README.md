@@ -17,14 +17,15 @@
 
 
 #### 页面展示
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/1.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/2.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/3.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/4.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/5.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/6.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/7.png) 
-![image](https://github.com/SJcz/C-Shop/tree/master/screenshot/8.jpg) 
+<image src="/screenshot/1.png" width="300"/>
+<image src="/screenshot/2.png" width="300"/>
+<image src="/screenshot/3.png" width="300"/>
+<image src="/screenshot/4.png" width="300"/>
+<image src="/screenshot/5.png" width="300"/>
+<image src="/screenshot/6.png" width="300"/>
+<image src="/screenshot/7.png" width="300"/>
+<image src="/screenshot/8.jpg" width="300"/>
+
 
 
 #### gif效果
